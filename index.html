@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechQuiz - Quiz de Tecnologia</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>TechQuiz</h1>
+        <p>Teste seus conhecimentos sobre tecnologia!</p>
+    </header>
+
+    <main>
+        <section class="introducao">
+            <h2>Bem-vindo ao TechQuiz!</h2>
+
+            <p>
+                Descubra o quanto você sabe sobre tecnologia,
+                programação, hardware e segurança digital.
+            </p>
+
+            <p>
+                Responda às perguntas e confira sua pontuação no final.
+            </p>
+        </section>
+
+        <section class="area-quiz">
+            <h2>Quiz de Tecnologia</h2>
+
+            <form action="/resultado" method="POST">
+
+                {% for pergunta in perguntas %}
+                    {% set numero = loop.index0 %}
+
+                    <div class="pergunta">
+                        <h3>
+                            {{ loop.index }}. {{ pergunta.pergunta }}
+                        </h3>
+
+                        {% for opcao in pergunta.opcoes %}
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="pergunta_{{ numero }}"
+                                    value="{{ loop.index0 }}"
+                                    required
+                                >
+
+                                {{ opcao }}
+                            </label>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+
+                <button type="submit">Ver resultado</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>TechQuiz — Aprenda e teste seus conhecimentos.</p>
+    </footer>
+
+</body>
+</html>
