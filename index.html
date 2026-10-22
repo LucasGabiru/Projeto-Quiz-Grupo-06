@@ -1,71 +1,174 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>TechQuiz - Quiz de Tecnologia</title>
-
-    <link rel="stylesheet" href="/style.css">
+    <meta name="description" content="TechQuiz: teste seus conhecimentos sobre inteligência artificial e tecnologia.">
+    <title>TechQuiz — Quiz de Tecnologia</title>
+    <link rel="stylesheet" href="{{ url_for('estilo') }}">
 </head>
 <body>
 
-    <header>
-        <h1>TechQuiz</h1>
-        <p>Teste seus conhecimentos sobre tecnologia!</p>
+    <header class="site-header">
+        <a class="logo" href="{{ url_for('inicio') }}">Tech<span>Quiz</span></a>
+        <p>Conhecimento em tecnologia, uma pergunta por vez.</p>
     </header>
 
-    <main>
-        <section class="introducao">
-            <h2>Bem-vindo ao TechQuiz!</h2>
+    <main class="container">
+
+        {% if estado == "inicio" %}
+
+        <section class="hero card">
+            <span class="eyebrow">QUIZ DE TECNOLOGIA</span>
+
+            <h1>Desafie seu conhecimento sobre <span>Inteligência Artificial</span></h1>
 
             <p>
-                Descubra o quanto você sabe sobre tecnologia,
-                programação, hardware e segurança digital.
+                Responda a três perguntas sobre inteligência artificial,
+                aprendizado de máquina e IA generativa.
             </p>
 
             <p>
-                Responda às perguntas e confira sua pontuação no final.
+                No final, veja sua pontuação, confira as explicações
+                e explore as fontes para aprender ainda mais.
             </p>
-        </section>
 
-        <section class="area-quiz">
-            <h2>Quiz de Tecnologia</h2>
+            <ul class="feature-list">
+                <li>3 perguntas sobre tecnologia</li>
+                <li>Correção automática das respostas</li>
+                <li>Explicações e fontes de pesquisa</li>
+            </ul>
 
-            <form action="/resultado" method="POST">
-
-                {% for pergunta in perguntas %}
-                    {% set numero = loop.index0 %}
-
-                    <div class="pergunta">
-                        <h3>
-                            {{ loop.index }}. {{ pergunta.pergunta }}
-                        </h3>
-
-                        {% for opcao in pergunta.opcoes %}
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="pergunta_{{ numero }}"
-                                    value="{{ loop.index0 }}"
-                                    required
-                                >
-
-                                {{ opcao }}
-                            </label>
-                        {% endfor %}
-                    </div>
-                {% endfor %}
-
-                <button type="submit">Ver resultado</button>
-
+            <form action="{{ url_for('iniciar') }}" method="post">
+                <button class="button button-primary" type="submit">
+                    Iniciar quiz →
+                </button>
             </form>
         </section>
+
+        {% elif estado == "jogo" %}
+
+        <section class="quiz-heading">
+            <span class="eyebrow">HORA DO DESAFIO</span>
+            <h1>Quiz de Inteligência Artificial</h1>
+            <p>Selecione uma alternativa para cada pergunta.</p>
+
+            <div class="progress-label">
+                <span>3 perguntas</span>
+                <span>Responda todas para continuar</span>
+            </div>
+        </section>
+
+        <form action="{{ url_for('resultado') }}" method="post" class="quiz-form">
+
+            {% for pergunta in perguntas %}
+            {% set numero = loop.index0 %}
+
+            <fieldset class="question-card card">
+                <legend>
+                    <span class="question-number">{{ loop.index }}</span>
+                    {{ pergunta.pergunta }}
+                </legend>
+
+                <div class="options">
+                    {% for alternativa in pergunta.alternativas %}
+                    <label class="option">
+                        <input
+                            type="radio"
+                            name="pergunta_{{ numero }}"
+                            value="{{ loop.index0 }}"
+                            required
+                        >
+                        <span>{{ alternativa }}</span>
+                    </label>
+                    {% endfor %}
+                </div>
+            </fieldset>
+
+            {% endfor %}
+
+            <button class="button button-primary submit-button" type="submit">
+                Ver meu resultado →
+            </button>
+
+        </form>
+
+        {% elif estado == "resultado" %}
+
+        <section class="result-heading card">
+            <span class="eyebrow">RESULTADO FINAL</span>
+
+            <h1>
+                Você acertou
+                <span>{{ pontos }} de {{ perguntas|length }}</span>
+                perguntas!
+            </h1>
+
+            <p>{{ mensagem }}</p>
+
+            <div
+                class="score-track"
+                role="img"
+                aria-label="Pontuação: {{ pontos }} de {{ perguntas|length }}"
+            >
+                <div
+                    class="score-fill"
+                    style="width: {{ (pontos / (perguntas|length) * 100)|round }}%"
+                ></div>
+            </div>
+
+            <a class="button button-secondary" href="{{ url_for('inicio') }}">
+                Voltar ao início
+            </a>
+        </section>
+
+        <section class="feedback-section">
+            <h2>Respostas e explicações</h2>
+
+            {% for item in revisao %}
+
+            <article class="feedback-card card">
+                <h3>
+                    <span class="feedback-icon {{ 'correct' if item.acertou else 'incorrect' }}">
+                        {{ '✓' if item.acertou else '!' }}
+                    </span>
+
+                    {{ loop.index }}. {{ item.pergunta.pergunta }}
+                </h3>
+
+                <p>
+                    <strong>Sua resposta:</strong>
+                    {{ item.resposta_texto }}
+                </p>
+
+                <p>
+                    <strong>Resposta correta:</strong>
+                    {{ item.pergunta.alternativas[item.pergunta.correta] }}
+                </p>
+
+                <p class="explanation">
+                    {{ item.pergunta.explicacao }}
+                </p>
+
+                <a
+                    class="source-link"
+                    href="{{ item.pergunta.fonte.url }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Fonte: {{ item.pergunta.fonte.titulo }} ↗
+                </a>
+            </article>
+
+            {% endfor %}
+        </section>
+
+        {% endif %}
+
     </main>
 
-    <footer>
-        <p>TechQuiz — Aprenda e teste seus conhecimentos.</p>
+    <footer class="site-footer">
+        <p>TechQuiz — feito com Flask.</p>
     </footer>
 
 </body>

@@ -1,0 +1,47 @@
+[
+  {
+    "pergunta": "Qual alternativa descreve melhor a inteligência artificial?",
+    "alternativas": [
+      "Uma conexão de internet mais rápida.",
+      "Sistemas capazes de realizar tarefas como reconhecer padrões e apoiar decisões.",
+      "Qualquer equipamento que usa eletricidade.",
+      "Um programa que possui necessariamente consciência humana."
+    ],
+    "correta": 1,
+    "explicacao": "A IA reúne técnicas para executar tarefas como reconhecimento de padrões, compreensão de linguagem e tomada de decisão. Isso não significa que o sistema tenha consciência humana.",
+    "fonte": {
+      "titulo": "IBM — O que é inteligência artificial?",
+      "url": "https://www.ibm.com/think/topics/artificial-intelligence"
+    }
+  },
+  {
+    "pergunta": "No aprendizado de máquina, como um modelo aprende a fazer previsões?",
+    "alternativas": [
+      "Identificando padrões em dados durante o treinamento.",
+      "Recebendo uma resposta manual para cada situação futura.",
+      "Aumentando o brilho da tela do computador.",
+      "Conectando-se obrigatoriamente à internet a cada cálculo."
+    ],
+    "correta": 0,
+    "explicacao": "No aprendizado de máquina, algoritmos ajustam modelos com base em dados. Os padrões aprendidos ajudam a prever resultados em novos exemplos.",
+    "fonte": {
+      "titulo": "IBM — Machine learning",
+      "url": "https://www.ibm.com/think/topics/machine-learning"
+    }
+  },
+  {
+    "pergunta": "Qual é um exemplo de uso de IA generativa?",
+    "alternativas": [
+      "Ordenar uma lista de nomes alfabeticamente.",
+      "Calcular a soma de duas células de uma planilha.",
+      "Copiar um arquivo para outra pasta.",
+      "Criar uma imagem a partir de uma descrição em texto."
+    ],
+    "correta": 3,
+    "explicacao": "A IA generativa produz conteúdo, como textos, imagens e áudio, a partir de padrões aprendidos no treinamento e de uma solicitação do usuário.",
+    "fonte": {
+      "titulo": "IBM — IA generativa",
+      "url": "https://www.ibm.com/think/topics/generative-ai"
+    }
+  }
+]
