@@ -1,47 +1,97 @@
-[
-  {
-    "pergunta": "Qual alternativa descreve melhor a inteligência artificial?",
-    "alternativas": [
-      "Uma conexão de internet mais rápida.",
-      "Sistemas capazes de realizar tarefas como reconhecer padrões e apoiar decisões.",
-      "Qualquer equipamento que usa eletricidade.",
-      "Um programa que possui necessariamente consciência humana."
-    ],
-    "correta": 1,
-    "explicacao": "A IA reúne técnicas para executar tarefas como reconhecimento de padrões, compreensão de linguagem e tomada de decisão. Isso não significa que o sistema tenha consciência humana.",
-    "fonte": {
-      "titulo": "IBM — O que é inteligência artificial?",
-      "url": "https://www.ibm.com/think/topics/artificial-intelligence"
+
+{
+  "titulo": "Questionário: A problemática da Inteligência Artificial",
+  "descricao": "Leia cada pergunta, escolha uma alternativa e confira a explicação.",
+  "perguntas": [
+    {
+      "id": 1,
+      "pergunta": "Qual é um dos principais problemas da Inteligência Artificial no mercado de trabalho?",
+      "alternativas": {
+        "A": "A substituição de trabalhadores em algumas funções",
+        "B": "O fim de todas as profissões existentes",
+        "C": "A proibição de novas tecnologias",
+        "D": "A impossibilidade de trabalhar com computadores"
+      },
+      "resposta_correta": "A",
+      "explicacao": "A automação pode reduzir a necessidade de pessoas em determinadas tarefas e exigir novas qualificações profissionais.",
+      "fonte": {
+        "nome": "UNESCO — Ética da Inteligência Artificial",
+        "url": "https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence"
+      }
+    },
+    {
+      "id": 2,
+      "pergunta": "Por que o uso da IA pode colocar a privacidade em risco?",
+      "alternativas": {
+        "A": "Porque elimina todos os dados da internet",
+        "B": "Porque pode coletar ou utilizar dados pessoais de forma inadequada",
+        "C": "Porque impede o acesso a redes sociais",
+        "D": "Porque torna todas as informações públicas automaticamente"
+      },
+      "resposta_correta": "B",
+      "explicacao": "Dados pessoais podem ser expostos ou utilizados sem proteção adequada, causando riscos à privacidade.",
+      "fonte": {
+        "nome": "UNESCO — Ética da Inteligência Artificial",
+        "url": "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics"
+      }
+    },
+    {
+      "id": 3,
+      "pergunta": "Como a Inteligência Artificial pode reproduzir preconceitos?",
+      "alternativas": {
+        "A": "Ao impedir que os seres humanos aprendam",
+        "B": "Ao funcionar sempre sem utilizar dados",
+        "C": "Ao aprender padrões presentes em dados que contêm preconceitos",
+        "D": "Ao garantir decisões iguais e justas em todas as situações"
+      },
+      "resposta_correta": "C",
+      "explicacao": "Se os dados utilizados no treinamento contêm desigualdades ou preconceitos, a IA pode reproduzi-los ou ampliá-los.",
+      "fonte": {
+        "nome": "NIST — AI Risk Management Framework",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+      }
+    },
+    {
+      "id": 4,
+      "pergunta": "Qual é um risco da utilização da IA para criar imagens, vídeos e áudios?",
+      "alternativas": {
+        "A": "A eliminação de toda a comunicação digital",
+        "B": "A impossibilidade de produzir conteúdos falsos",
+        "C": "A garantia de que todas as notícias sejam verdadeiras",
+        "D": "A disseminação de desinformação e de conteúdos manipulados"
+      },
+      "resposta_correta": "D",
+      "explicacao": "Imagens, vídeos e áudios sintéticos podem ser utilizados para enganar pessoas, aplicar golpes ou manipular opiniões.",
+      "fonte": {
+        "nome": "UNESCO — Ética da Inteligência Artificial",
+        "url": "https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence"
+      }
+    },
+    {
+      "id": 5,
+      "pergunta": "Qual medida ajuda a reduzir os riscos causados por erros da Inteligência Artificial?",
+      "alternativas": {
+        "A": "Permitir que a IA tome todas as decisões sem fiscalização",
+        "B": "Eliminar toda a participação humana",
+        "C": "Realizar supervisão humana e avaliar os riscos do sistema",
+        "D": "Aceitar todas as respostas da IA como verdadeiras"
+      },
+      "resposta_correta": "C",
+      "explicacao": "A supervisão e a avaliação de riscos ajudam a identificar falhas, corrigir problemas e responsabilizar os envolvidos.",
+      "fonte": {
+        "nome": "NIST — AI Risk Management Framework",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+      }
     }
-  },
-  {
-    "pergunta": "No aprendizado de máquina, como um modelo aprende a fazer previsões?",
-    "alternativas": [
-      "Identificando padrões em dados durante o treinamento.",
-      "Recebendo uma resposta manual para cada situação futura.",
-      "Aumentando o brilho da tela do computador.",
-      "Conectando-se obrigatoriamente à internet a cada cálculo."
-    ],
-    "correta": 0,
-    "explicacao": "No aprendizado de máquina, algoritmos ajustam modelos com base em dados. Os padrões aprendidos ajudam a prever resultados em novos exemplos.",
-    "fonte": {
-      "titulo": "IBM — Machine learning",
-      "url": "https://www.ibm.com/think/topics/machine-learning"
+  ],
+  "fontes_gerais": [
+    {
+      "nome": "UNESCO — Recomendação sobre a Ética da Inteligência Artificial",
+      "url": "https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence"
+    },
+    {
+      "nome": "NIST — AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
     }
-  },
-  {
-    "pergunta": "Qual é um exemplo de uso de IA generativa?",
-    "alternativas": [
-      "Ordenar uma lista de nomes alfabeticamente.",
-      "Calcular a soma de duas células de uma planilha.",
-      "Copiar um arquivo para outra pasta.",
-      "Criar uma imagem a partir de uma descrição em texto."
-    ],
-    "correta": 3,
-    "explicacao": "A IA generativa produz conteúdo, como textos, imagens e áudio, a partir de padrões aprendidos no treinamento e de uma solicitação do usuário.",
-    "fonte": {
-      "titulo": "IBM — IA generativa",
-      "url": "https://www.ibm.com/think/topics/generative-ai"
-    }
-  }
-]
+  ]
+}
