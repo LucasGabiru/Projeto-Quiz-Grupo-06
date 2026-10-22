@@ -1,9 +1,16 @@
 /* =========================================================
    TechQuiz — identidade visual responsiva
+<<<<<<< HEAD
    Compatível com o index.html e o Flask
    ========================================================= */
 
    :root {
+=======
+   Arquivo: style.css
+   ========================================================= */
+
+:root {
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
     color-scheme: light;
     --cor-fundo: #f3f6fc;
     --cor-superficie: #ffffff;
@@ -30,8 +37,11 @@ html {
 body {
     min-height: 100vh;
     margin: 0;
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
+=======
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
     background:
         radial-gradient(circle at 10% 0%, rgba(54, 89, 227, 0.11), transparent 28rem),
         radial-gradient(circle at 95% 18%, rgba(25, 183, 160, 0.10), transparent 24rem),
@@ -42,6 +52,7 @@ body {
     line-height: 1.6;
 }
 
+<<<<<<< HEAD
 a {
     color: var(--cor-primaria);
 }
@@ -59,13 +70,25 @@ input:focus-visible {
     position: relative;
     overflow: hidden;
     padding: 42px 24px 48px;
+=======
+/* Cabeçalho */
+header {
+    position: relative;
+    overflow: hidden;
+    padding: 48px 24px 54px;
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
     background: linear-gradient(135deg, #172554 0%, #283f9f 52%, #3659e3 100%);
     color: #ffffff;
     text-align: center;
 }
 
+<<<<<<< HEAD
 .site-header::before,
 .site-header::after {
+=======
+header::before,
+header::after {
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
     position: absolute;
     content: "";
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -73,20 +96,29 @@ input:focus-visible {
     pointer-events: none;
 }
 
+<<<<<<< HEAD
 .site-header::before {
+=======
+header::before {
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
     width: 300px;
     height: 300px;
     top: -205px;
     left: calc(50% - 390px);
 }
 
+<<<<<<< HEAD
 .site-header::after {
+=======
+header::after {
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
     width: 420px;
     height: 420px;
     right: calc(50% - 600px);
     bottom: -330px;
 }
 
+<<<<<<< HEAD
 .logo {
     position: relative;
     z-index: 1;
@@ -120,11 +152,44 @@ input:focus-visible {
 
 .card {
     border: 1px solid rgba(223, 230, 241, 0.95);
+=======
+header h1 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-size: clamp(2.35rem, 7vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -0.06em;
+    line-height: 1.1;
+}
+
+header p {
+    position: relative;
+    z-index: 1;
+    max-width: 580px;
+    margin: 14px auto 0;
+    color: rgba(255, 255, 255, 0.83);
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+}
+
+/* Conteúdo principal */
+main {
+    width: min(var(--largura-maxima), calc(100% - 40px));
+    margin: -24px auto 48px;
+    position: relative;
+    z-index: 2;
+}
+
+.introducao,
+.area-quiz {
+    border: 1px solid rgba(223, 230, 241, 0.9);
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
     border-radius: var(--raio-grande);
     background: var(--cor-superficie);
     box-shadow: var(--sombra);
 }
 
+<<<<<<< HEAD
 .eyebrow {
     display: inline-block;
     color: var(--cor-primaria);
@@ -244,11 +309,84 @@ input:focus-visible {
     align-items: flex-start;
     gap: 12px;
     padding: 13px 15px;
+=======
+.introducao {
+    padding: clamp(24px, 5vw, 38px);
+    margin-bottom: 26px;
+}
+
+.introducao h2,
+.area-quiz > h2 {
+    margin: 0;
+    color: var(--cor-texto);
+    font-size: clamp(1.45rem, 3.5vw, 1.9rem);
+    font-weight: 750;
+    letter-spacing: -0.035em;
+    line-height: 1.25;
+}
+
+.introducao h2::before {
+    display: inline-block;
+    width: 9px;
+    height: 27px;
+    margin-right: 12px;
+    border-radius: 99px;
+    background: var(--cor-destaque);
+    content: "";
+    vertical-align: -4px;
+}
+
+.introducao p {
+    max-width: 760px;
+    margin: 14px 0 0;
+    color: var(--cor-texto-suave);
+}
+
+.area-quiz {
+    padding: clamp(22px, 5vw, 38px);
+}
+
+.area-quiz > h2 {
+    margin-bottom: 24px;
+}
+
+/* Blocos de perguntas */
+.pergunta {
+    margin: 0 0 20px;
+    padding: clamp(18px, 3.5vw, 26px);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-medio);
+    background: #fbfcff;
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.pergunta:hover {
+    border-color: #c7d2fe;
+    box-shadow: 0 8px 22px rgba(54, 89, 227, 0.06);
+}
+
+.pergunta h3 {
+    margin: 0 0 17px;
+    color: #243451;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* Opções de resposta */
+.pergunta label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 10px;
+    padding: 12px 14px;
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
     border: 1px solid #e5eaf3;
     border-radius: 11px;
     background: #ffffff;
     color: #3d4a60;
     cursor: pointer;
+<<<<<<< HEAD
     line-height: 1.5;
     overflow-wrap: anywhere;
     transition: background-color 160ms ease,
@@ -257,18 +395,39 @@ input:focus-visible {
 }
 
 .option:hover {
+=======
+    line-height: 1.45;
+    transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.pergunta label:hover {
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
     border-color: #b9c7ff;
     background: #f4f6ff;
     color: #223a9b;
 }
 
+<<<<<<< HEAD
 .option:has(input[type="radio"]:checked) {
+=======
+.pergunta input[type="radio"] {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    margin: 2px 0 0;
+    accent-color: var(--cor-primaria);
+    cursor: pointer;
+}
+
+.pergunta label:has(input[type="radio"]:checked) {
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
     border-color: var(--cor-primaria);
     background: #eef2ff;
     color: #243eaf;
     box-shadow: inset 0 0 0 1px rgba(54, 89, 227, 0.08);
 }
 
+<<<<<<< HEAD
 .option input[type="radio"] {
     flex: 0 0 auto;
     width: 18px;
@@ -281,6 +440,9 @@ input:focus-visible {
 /* Botões */
 
 .button,
+=======
+/* Botão principal */
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
 button,
 input[type="submit"] {
     display: inline-flex;
@@ -288,6 +450,10 @@ input[type="submit"] {
     align-items: center;
     justify-content: center;
     gap: 10px;
+<<<<<<< HEAD
+=======
+    margin-top: 8px;
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
     padding: 13px 24px;
     border: 0;
     border-radius: 12px;
@@ -296,6 +462,7 @@ input[type="submit"] {
     color: #ffffff;
     font: inherit;
     font-weight: 750;
+<<<<<<< HEAD
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -305,6 +472,12 @@ input[type="submit"] {
 }
 
 .button:hover,
+=======
+    cursor: pointer;
+    transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
 button:hover,
 input[type="submit"]:hover {
     transform: translateY(-2px);
@@ -312,12 +485,16 @@ input[type="submit"]:hover {
     box-shadow: 0 12px 24px rgba(54, 89, 227, 0.28);
 }
 
+<<<<<<< HEAD
 .button:active,
+=======
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
 button:active,
 input[type="submit"]:active {
     transform: translateY(0);
 }
 
+<<<<<<< HEAD
 .button-primary {
     background: linear-gradient(135deg, var(--cor-primaria), #4b6cf0);
 }
@@ -440,11 +617,24 @@ input[type="submit"]:active {
 .site-footer {
     padding: 24px 20px 32px;
     border-top: 1px solid var(--cor-borda);
+=======
+button:focus-visible,
+input[type="submit"]:focus-visible,
+input[type="radio"]:focus-visible {
+    outline: 3px solid rgba(25, 183, 160, 0.7);
+    outline-offset: 3px;
+}
+
+/* Rodapé */
+footer {
+    padding: 24px 20px 32px;
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
     color: var(--cor-texto-suave);
     text-align: center;
     font-size: 0.92rem;
 }
 
+<<<<<<< HEAD
 .site-footer p {
     margin: 0;
 }
@@ -488,14 +678,58 @@ input[type="submit"]:active {
     }
 
     .button,
+=======
+footer p {
+    margin: 0;
+}
+
+/* Telas menores */
+@media (max-width: 600px) {
+    header {
+        padding: 38px 18px 46px;
+    }
+
+    main {
+        width: min(100% - 24px, var(--largura-maxima));
+        margin-top: -18px;
+        margin-bottom: 30px;
+    }
+
+    .introducao,
+    .area-quiz {
+        border-radius: 17px;
+    }
+
+    .introducao {
+        margin-bottom: 16px;
+    }
+
+    .area-quiz > h2 {
+        margin-bottom: 18px;
+    }
+
+    .pergunta {
+        margin-bottom: 14px;
+        padding: 16px;
+    }
+
+    .pergunta label {
+        padding: 12px;
+    }
+
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
     button,
     input[type="submit"] {
         width: 100%;
     }
 }
 
+<<<<<<< HEAD
 /* Preferência por menos animações */
 
+=======
+/* Respeita quem prefere menos animações */
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -508,4 +742,8 @@ input[type="submit"]:active {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d339812350fad3b6094a115bb87ec7f75c3a96a3
