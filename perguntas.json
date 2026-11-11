@@ -1,97 +1,72 @@
-
-{
-  "titulo": "Questionário: A problemática da Inteligência Artificial",
-  "descricao": "Leia cada pergunta, escolha uma alternativa e confira a explicação.",
-  "perguntas": [
-    {
-      "id": 1,
-      "pergunta": "Qual é um dos principais problemas da Inteligência Artificial no mercado de trabalho?",
-      "alternativas": {
-        "A": "A substituição de trabalhadores em algumas funções",
-        "B": "O fim de todas as profissões existentes",
-        "C": "A proibição de novas tecnologias",
-        "D": "A impossibilidade de trabalhar com computadores"
-      },
-      "resposta_correta": "A",
-      "explicacao": "A automação pode reduzir a necessidade de pessoas em determinadas tarefas e exigir novas qualificações profissionais.",
-      "fonte": {
-        "nome": "UNESCO — Ética da Inteligência Artificial",
-        "url": "https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence"
-      }
-    },
-    {
-      "id": 2,
-      "pergunta": "Por que o uso da IA pode colocar a privacidade em risco?",
-      "alternativas": {
-        "A": "Porque elimina todos os dados da internet",
-        "B": "Porque pode coletar ou utilizar dados pessoais de forma inadequada",
-        "C": "Porque impede o acesso a redes sociais",
-        "D": "Porque torna todas as informações públicas automaticamente"
-      },
-      "resposta_correta": "B",
-      "explicacao": "Dados pessoais podem ser expostos ou utilizados sem proteção adequada, causando riscos à privacidade.",
-      "fonte": {
-        "nome": "UNESCO — Ética da Inteligência Artificial",
-        "url": "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics"
-      }
-    },
-    {
-      "id": 3,
-      "pergunta": "Como a Inteligência Artificial pode reproduzir preconceitos?",
-      "alternativas": {
-        "A": "Ao impedir que os seres humanos aprendam",
-        "B": "Ao funcionar sempre sem utilizar dados",
-        "C": "Ao aprender padrões presentes em dados que contêm preconceitos",
-        "D": "Ao garantir decisões iguais e justas em todas as situações"
-      },
-      "resposta_correta": "C",
-      "explicacao": "Se os dados utilizados no treinamento contêm desigualdades ou preconceitos, a IA pode reproduzi-los ou ampliá-los.",
-      "fonte": {
-        "nome": "NIST — AI Risk Management Framework",
-        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
-      }
-    },
-    {
-      "id": 4,
-      "pergunta": "Qual é um risco da utilização da IA para criar imagens, vídeos e áudios?",
-      "alternativas": {
-        "A": "A eliminação de toda a comunicação digital",
-        "B": "A impossibilidade de produzir conteúdos falsos",
-        "C": "A garantia de que todas as notícias sejam verdadeiras",
-        "D": "A disseminação de desinformação e de conteúdos manipulados"
-      },
-      "resposta_correta": "D",
-      "explicacao": "Imagens, vídeos e áudios sintéticos podem ser utilizados para enganar pessoas, aplicar golpes ou manipular opiniões.",
-      "fonte": {
-        "nome": "UNESCO — Ética da Inteligência Artificial",
-        "url": "https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence"
-      }
-    },
-    {
-      "id": 5,
-      "pergunta": "Qual medida ajuda a reduzir os riscos causados por erros da Inteligência Artificial?",
-      "alternativas": {
-        "A": "Permitir que a IA tome todas as decisões sem fiscalização",
-        "B": "Eliminar toda a participação humana",
-        "C": "Realizar supervisão humana e avaliar os riscos do sistema",
-        "D": "Aceitar todas as respostas da IA como verdadeiras"
-      },
-      "resposta_correta": "C",
-      "explicacao": "A supervisão e a avaliação de riscos ajudam a identificar falhas, corrigir problemas e responsabilizar os envolvidos.",
-      "fonte": {
-        "nome": "NIST — AI Risk Management Framework",
-        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
-      }
-    }
-  ],
-  "fontes_gerais": [
-    {
-      "nome": "UNESCO — Recomendação sobre a Ética da Inteligência Artificial",
-      "url": "https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence"
-    },
-    {
-      "nome": "NIST — AI Risk Management Framework",
-      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
-    }
-  ]
-}
+[
+  {
+    "pergunta": "O que significa a sigla HTML?",
+    "opcoes": ["HyperText Markup Language", "High Transfer Machine Language", "Hyper Tool Multi Language", "Home Text Markup Level"],
+    "correta": 0,
+    "explicacao": "HTML é a linguagem de marcação que define a estrutura e o conteúdo das páginas web: títulos, parágrafos, links, formulários e assim por diante.",
+    "fonte": { "texto": "MDN — HTML", "url": "https://developer.mozilla.org/pt-BR/docs/Web/HTML" }
+  },
+  {
+    "pergunta": "Qual linguagem é usada para estilizar páginas web (cores, fontes e layout)?",
+    "opcoes": ["SQL", "CSS", "Python", "XML"],
+    "correta": 1,
+    "explicacao": "CSS (Cascading Style Sheets) descreve a apresentação visual de um documento HTML.",
+    "fonte": { "texto": "MDN — CSS", "url": "https://developer.mozilla.org/pt-BR/docs/Web/CSS" }
+  },
+  {
+    "pergunta": "Qual componente é considerado o \"cérebro\" do computador, responsável por executar as instruções dos programas?",
+    "opcoes": ["Placa de vídeo", "Fonte de alimentação", "Processador (CPU)", "Disco rígido"],
+    "correta": 2,
+    "explicacao": "A CPU busca, decodifica e executa as instruções dos programas, coordenando o trabalho dos demais componentes.",
+    "fonte": { "texto": "Wikipédia — Unidade central de processamento", "url": "https://pt.wikipedia.org/wiki/Unidade_central_de_processamento" }
+  },
+  {
+    "pergunta": "Para que serve a memória RAM?",
+    "opcoes": ["Guardar arquivos permanentemente", "Armazenar temporariamente os dados dos programas em execução", "Conectar o computador à internet", "Resfriar o processador"],
+    "correta": 1,
+    "explicacao": "A RAM é uma memória rápida e volátil: guarda os dados em uso e perde o conteúdo quando o computador é desligado.",
+    "fonte": { "texto": "Wikipédia — Memória de acesso aleatório", "url": "https://pt.wikipedia.org/wiki/Mem%C3%B3ria_de_acesso_aleat%C3%B3rio" }
+  },
+  {
+    "pergunta": "O que é phishing?",
+    "opcoes": ["Um tipo de antivírus", "Uma técnica de backup em nuvem", "Uma fraude que engana a pessoa para roubar dados ou senhas", "Um protocolo de rede sem fio"],
+    "correta": 2,
+    "explicacao": "No phishing, o golpista se passa por uma empresa ou pessoa confiável (e-mail, mensagem, site falso) para obter informações sensíveis.",
+    "fonte": { "texto": "Wikipédia — Phishing", "url": "https://pt.wikipedia.org/wiki/Phishing" }
+  },
+  {
+    "pergunta": "O que o \"S\" de HTTPS indica?",
+    "opcoes": ["Server", "Speed", "Secure (conexão segura e criptografada)", "Simple"],
+    "correta": 2,
+    "explicacao": "HTTPS é o HTTP com criptografia (TLS), o que protege os dados trafegados entre o navegador e o site.",
+    "fonte": { "texto": "MDN — HTTPS", "url": "https://developer.mozilla.org/pt-BR/docs/Glossary/HTTPS" }
+  },
+  {
+    "pergunta": "O que é a autenticação em dois fatores (2FA)?",
+    "opcoes": ["Usar duas senhas iguais em contas diferentes", "Confirmar a identidade com a senha e mais uma prova, como um código", "Ter duas contas no mesmo serviço", "Trocar a senha duas vezes por ano"],
+    "correta": 1,
+    "explicacao": "O 2FA exige algo que você sabe (senha) e algo que você tem ou é (código, app, biometria), dificultando o acesso indevido mesmo com a senha vazada.",
+    "fonte": { "texto": "Wikipédia — Autenticação multifator", "url": "https://pt.wikipedia.org/wiki/Autentica%C3%A7%C3%A3o_multifator" }
+  },
+  {
+    "pergunta": "Para que serve o Git?",
+    "opcoes": ["Editar imagens", "Controlar versões de código e colaborar em projetos", "Hospedar bancos de dados", "Compilar jogos"],
+    "correta": 1,
+    "explicacao": "O Git é um sistema de controle de versão distribuído: registra o histórico de mudanças e facilita o trabalho em equipe.",
+    "fonte": { "texto": "Pro Git (livro oficial)", "url": "https://git-scm.com/book/pt-br/v2" }
+  },
+  {
+    "pergunta": "Qual das opções é um formato de dados baseado em texto, muito usado para trocar informações entre sistemas?",
+    "opcoes": ["JSON", "PNG", "MP3", "EXE"],
+    "correta": 0,
+    "explicacao": "JSON (JavaScript Object Notation) é um formato leve, legível por humanos e fácil de processar por máquinas.",
+    "fonte": { "texto": "MDN — JSON", "url": "https://developer.mozilla.org/pt-BR/docs/Glossary/JSON" }
+  },
+  {
+    "pergunta": "Qual é uma vantagem típica de um SSD em relação a um HD tradicional?",
+    "opcoes": ["Ser mais rápido, por não ter partes mecânicas móveis", "Ter sempre menor preço por gigabyte", "Usar fita magnética", "Não precisar de conexão com a placa-mãe"],
+    "correta": 0,
+    "explicacao": "O SSD usa memória flash, sem disco giratório nem cabeça de leitura, o que resulta em acesso mais rápido e maior resistência a impactos.",
+    "fonte": { "texto": "Wikipédia — Unidade de estado sólido", "url": "https://pt.wikipedia.org/wiki/Unidade_de_estado_s%C3%B3lido" }
+  }
+]
