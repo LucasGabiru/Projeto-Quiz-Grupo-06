@@ -3,6 +3,7 @@
   "descricao": "Teste seus conhecimentos sobre tecnologia, programação, hardware e segurança digital.",
   "perguntas": [
     {
+      "id": 1,
       "pergunta": "O que significa a sigla HTML?",
       "alternativas": {
         "A": "HyperText Markup Language",
@@ -18,6 +19,7 @@
       }
     },
     {
+      "id": 2
       "pergunta": "Qual linguagem é usada para estilizar páginas web (cores, fontes e layout)?",
       "alternativas": {
         "A": "SQL",
@@ -33,6 +35,7 @@
       }
     },
     {
+      "id": 3 
       "pergunta": "Qual componente é considerado o \"cérebro\" do computador, responsável por executar as instruções dos programas?",
       "alternativas": {
         "A": "Placa de vídeo",
@@ -48,6 +51,7 @@
       }
     },
     {
+      "id": 4 
       "pergunta": "Para que serve a memória RAM?",
       "alternativas": {
         "A": "Guardar arquivos permanentemente",
@@ -63,6 +67,7 @@
       }
     },
     {
+      "id": 5
       "pergunta": "O que é phishing?",
       "alternativas": {
         "A": "Um tipo de antivírus",
@@ -78,6 +83,7 @@
       }
     },
     {
+      "id": 6
       "pergunta": "O que o \"S\" de HTTPS indica?",
       "alternativas": {
         "A": "Server",
@@ -93,6 +99,7 @@
       }
     },
     {
+      "id": 7 
       "pergunta": "O que é a autenticação em dois fatores (2FA)?",
       "alternativas": {
         "A": "Usar duas senhas iguais em contas diferentes",
@@ -108,6 +115,7 @@
       }
     },
     {
+      "id": 8
       "pergunta": "Para que serve o Git?",
       "alternativas": {
         "A": "Editar imagens",
@@ -123,6 +131,7 @@
       }
     },
     {
+      "id": 9
       "pergunta": "Qual das opções é um formato de dados baseado em texto, muito usado para trocar informações entre sistemas?",
       "alternativas": {
         "A": "JSON",
@@ -138,6 +147,7 @@
       }
     },
     {
+      "id": 10
       "pergunta": "Qual é uma vantagem típica de um SSD em relação a um HD tradicional?",
       "alternativas": {
         "A": "Ser mais rápido, por não ter partes mecânicas móveis",
