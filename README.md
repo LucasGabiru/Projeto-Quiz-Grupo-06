@@ -16,7 +16,7 @@ Quiz interativo sobre os impactos e desafios da Inteligência Artificial, desenv
 
 ## Tema
 
-**Problemática da Inteligência Artificial.** O quiz tem 5 perguntas de múltipla escolha sobre temas como o impacto da IA no mercado de trabalho, privacidade, preconceito nos dados, desinformação e conteúdo sintético, e a importância da supervisão humana. Cada pergunta tem uma explicação e uma fonte confiável (como UNESCO e NIST), para que o quiz também sirva para aprender.
+**Problemática da Inteligência Artificial.** O quiz tem 10 perguntas de múltipla escolha sobre temas como o impacto da IA no mercado de trabalho, privacidade, preconceito nos dados, desinformação e conteúdo sintético, e a importância da supervisão humana. Cada pergunta tem uma explicação e uma fonte confiável (como UNESCO e NIST), para que o quiz também sirva para aprender.
 
 ## Regras do Quiz
 
